@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView t1,t2,t3;
+    TextView t1;
     EditText ed1,ed2,ed3;
     Button btn1,btn2,btn3,btn4;
 
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         t1=findViewById(R.id.txt1);
-        t2=findViewById(R.id.txt2);
-        t3=findViewById(R.id.txt3);
+//        t2=findViewById(R.id.txt2);
+//        t3=findViewById(R.id.txt3);
         
         
         ed1=findViewById(R.id.ed1);
@@ -36,22 +36,23 @@ public class MainActivity extends AppCompatActivity {
         btn4=findViewById(R.id.btn4);
         
         
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 n1=Double.parseDouble(ed1.getText().toString());
-                n2= Double.parseDouble(ed2.getText().toString());
+                n2=Double.parseDouble(ed2.getText().toString());
                 n3=n1+n2;
                 ed3.setText(String.valueOf(n3));
+
             }
         });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 n1=Double.parseDouble(ed1.getText().toString());
-                n2= Double.parseDouble(ed2.getText().toString());
+                n2=Double.parseDouble(ed2.getText().toString());
                 n3=n1-n2;
                 ed3.setText(String.valueOf(n3));
             }
@@ -60,23 +61,24 @@ public class MainActivity extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 n1=Double.parseDouble(ed1.getText().toString());
-                n2= Double.parseDouble(ed2.getText().toString());
+                n2=Double.parseDouble(ed2.getText().toString());
                 n3=n1*n2;
                 ed3.setText(String.valueOf(n3));
+
             }
         });
 
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 n1=Double.parseDouble(ed1.getText().toString());
-                n2= Double.parseDouble(ed2.getText().toString());
+                n2=Double.parseDouble(ed2.getText().toString());
                 n3=n1/n2;
                 ed3.setText(String.valueOf(n3));
             }
         });
+
+
     }
 }

@@ -1,138 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/txt1"
-        android:layout_width="129dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="28dp"
-        android:text="Enter 1st No"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153" />
-
-    <TextView
-        android:id="@+id/txt2"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="104dp"
-        android:gravity="center_horizontal"
-        android:text="Enter 2nd No"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txt3"
-        android:layout_width="96dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="104dp"
-        android:gravity="center_horizontal"
-        android:text="Result"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt1" />
 
     <EditText
         android:id="@+id/ed1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/ed3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.786"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        android:hint="Number 1"
+        android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/ed2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:ems="10"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/ed3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed1"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/ed3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="156dp" />
+        android:hint="Number 2"
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="ADD(+)"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt3"
-        tools:ignore="MissingConstraints" />
+        android:text="Add" />
 
     <Button
         android:id="@+id/btn2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:text="Sub(-)"
-        app:layout_constraintEnd_toStartOf="@+id/btn3"
-        app:layout_constraintTop_toBottomOf="@+id/ed3"
-        tools:ignore="MissingConstraints" />
+        android:text="Subtract" />
 
     <Button
         android:id="@+id/btn3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="MUL(*)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed3"
-        tools:ignore="MissingConstraints" />
+        android:text="Multiply" />
 
     <Button
         android:id="@+id/btn4"
-        android:layout_width="103dp"
-        android:layout_height="48dp"
-        android:text="DIV(/)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn2"
-        app:layout_constraintVertical_bias="0.189"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="168dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Divide" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Result"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+<EditText
+        android:id="@+id/ed3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
